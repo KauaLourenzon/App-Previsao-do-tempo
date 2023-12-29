@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="shortcut icon" type="image/x-icon" href="img/669958_weather_cloud_forecast_sun_icon.ico">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Previsão do tempo</title>
+</head>
+
+<body id="fdimagem" class="formatacao-pag">
+    <!-- fazer:
+- arrumar o card
+ -->
+    <div class="container"><br>
+        <div class="card tamanho-card card-background fonte-card">
+            <div>
+                <h1 class="fonte-titulo">PREVISÃO DO TEMPO</h1><br>
+                <label for="listarCidade" class="col-form-label  ">Escolha uma cidade:</label>
+                <select class="form-control" id="listarCidade" onchange="getWeatherData()">
+                    <option value="Paris">Paris</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Sydney">Sydney</option>
+                    <option value="London">London</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="New York">New York</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Beirute">Beirute</option>
+                    <option value="Moscow">Moscow</option>
+                    <option value="Bangkok">Bangkok</option>
+                </select>
+                <br>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5 class="card-title text-center negrito">CIDADE:</h5>
+                    <p class="card-text text-center" id="cidade"></p><br>
+                </div>
+                <div class="col">
+                    <h5 class="card-title text-center negrito">ESTADO ATUAL:</h5>
+                    <p class="card-text text-center" id="descricao"></p><br>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <h5 class="card-title text-center negrito">ESTADO GERAL:</h5>
+                    <p class="card-text text-center" id="descricaoGeral"></p><br>
+                </div>
+                <div class="col">
+                    <h5 class="card-title text-center negrito">TEMPERATURA(°C):</h5>
+                    <p class="card-text text-center" id="Temp"></p><br>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <h5 class="card-title text-center negrito">TEMPERATURA MINIMA:</h5>
+                    <p class="card-text text-center" id="TempMin"></p><br>
+                </div>
+                <div class="col">
+                    <h5 class="card-title text-center negrito">TEMPERATURA MAXIMA:</h5>
+                    <p class="card-text text-center" id="TempMax"></p><br>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <h5 class="card-title text-center negrito">Velocidade do vento:</h5>
+                    <p class="card-text text-center" id="Vento"></p><br>
+                </div>
+                <div class="col">
+                    <h5 class="card-title text-center negrito">Umidade do ar:</h5>
+                    <p class="card-text text-center" id="Umidade"></p><br>
+                </div>
+            </div>
+            <div class="card card-background card-menor">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="card-title">Longitude:<p id="longitude" class="card-text"></p></h6>
+                    </div>
+                    <div class="col">
+                        <h6 class="card-title">Latitude:<p id="latitude" class="card-text"></p></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+<script src="cordova.js"></script>
+<script src="js/dados.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

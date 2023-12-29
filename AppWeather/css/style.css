@@ -1,0 +1,58 @@
+.Fontegrande{
+    font-size: 25px;
+}
+
+.Fonte-media{
+    font-size: 18px;
+}
+
+.Fonte-pequena{
+    font-size: 14px;
+}
+
+.fonte-preta{
+    color: black;
+}
+
+.fonte-amarela{
+    color:gold;
+}
+
+.fonte-titulo{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.fonte-corpo{
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+.custom-card {
+    max-width: 550px; 
+    margin: auto; 
+    max-height: 720px;
+}
+
+.card-pequeno{
+    max-width: 300px;
+    margin:auto;
+    max-height: 150px;
+}
+
+.card-fundo{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+  
+.card-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2px);
+    opacity: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.fundo-pag{
+    background-size: cover;
+    background-attachment: local;
+}

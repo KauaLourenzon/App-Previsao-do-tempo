@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREVISÃO DO TEMPO</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/669958_weather_cloud_forecast_sun_icon.ico">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body id="fdimagem" style="background-image: url('https://img.olhardigital.com.br/wp-content/uploads/2022/10/previsao-do-tempo-meteorologia.jpg'); background-repeat: no-repeat;" class="fundo-pag">
+    <div class="container"><br>
+        <div class="card custom-card card-fundo card-background Fonte-media">
+            <div class="card-body">
+                <h1 class="Fontegrande font-weight-bold text-center fonte-preta"><u>PREVISÃO DO TEMPO</u></h1><br>
+                <label for="listarCidade" class="col-form-label text-center font-weight-bold">Escolha uma cidade:</label>
+                <select class="form-control" id="listarCidade" onchange="getWeatherData()">
+                  <option value="London">London</option>
+                  <option value="New York">New York</option>
+                  <option value="Paris">Paris</option>
+                  <option value="Berlin">Berlin</option>
+                  <option value="Tokyo">Tokyo</option>
+                  <option value="Sydney">Sydney</option>
+                  <option value="São Paulo">São Paulo</option>
+                  <option value="Beirute">Beirute</option>
+                  <option value="Moscow">Moscow</option>
+                  <option value="Bangkok">Bangkok</option>
+                </select>
+            </div>
+            <div class="card-body row">
+                <div class="col border-right>
+                  <h5 class="card-title">CIDADE:</h5>
+                  <p class="card-text font-weight-bold" id="cidade"></p>
+                </div>
+                <div class="col border-left">
+                  <h5 class="card-title text-right">ESTADO ATUAL:</h5>
+                  <p class="card-text text-right font-weight-bold" id="descricao"></p>
+                </div>
+            </div>
+            <div class="card-body row">
+                <div class="col border-right">
+                    <h5 class="card-title">ESTADO GERAL:</h5>
+                    <p class="card-text font-weight-bold" id="descricaoGeral"></p>
+                </div>
+                <div class="col border-left">
+                    <h5 class="card-title text-right">TEMPERATURA(°C):</h5>
+                    <p class="card-text text-right font-weight-bold" id="Temp"></p>
+                </div>
+            </div>
+            <div class="card-body row">
+                <div class="col border-right">
+                    <h5 class="card-title">TEMPERATURA MINIMA:</h5>
+                    <p class="card-text font-weight-bold" id="TempMin"></p>
+                </div>
+                <div class="col border-left">
+                    <h5 class="card-title text-right">TEMPERATURA MAXIMA:</h5>
+                    <p class="card-text text-right font-weight-bold" id="TempMax"></p>
+                </div>
+            </div>
+            <div class="card-body row">
+                <div class="col border-right">
+                    <h5 class="card-title">Velocidade do vento:</h5>
+                    <p class="card-text font-weight-bold" id="Vento"></p>
+                </div>
+                <div class="col border-left">
+                    <h5 class="card-title text-right">Umidade do ar:</h5>
+                    <p class="card-text text-right font-weight-bold" id="Umidade"></p>
+                </div>
+            </div><br>
+            
+            
+    </div>
+</div><br>
+<div class="card card-pequeno card-fundo card-background Fonte-media">
+    <div class="row">
+        <div class="col border-right">
+            <h1 class="font-weight-bold text-center fonte-preta Fonte-pequena">Longitude:<p id="longitude" class="text-center fonte-preta Fonte-pequena"></p></h1>
+        </div>
+        <div class="col border-left">
+            <h1 class="font-weight-bold text-center fonte-preta Fonte-pequena">Latitude:<p id="latitude" class="text-center fonte-preta Fonte-pequena"></p></h1>        
+        </div>
+    </div>
+</div><br>    
+    <script src="./js/dados.js"></script>
+</body>
+</html>
